@@ -1,0 +1,8 @@
+<header class="header">
+  <% if logged_in? %>
+    <%= link_to 'logout', logout_path %>
+  <% else %>
+    <a href="/auth/twitter">login</a>
+  <% end %>
+</header>
+

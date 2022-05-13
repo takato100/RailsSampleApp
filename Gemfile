@@ -57,3 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # added 05/11
 gem 'net-smtp'
+gem 'dotenv-rails'
+gem 'omniauth'
+gem 'omniauth-twitter'
+
