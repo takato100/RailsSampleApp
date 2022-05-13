@@ -1,0 +1,6 @@
+<h1>All Users<h1>
+<%@users.each do |uesr|%>
+    <div><%= image_tag user.image, size: "60x60" %><%= link_to "#{user.name}@#{user.nickname}", "/#{user.nickname}" %></div>
+    <hr>
+<%end%>
+<p>Find me in app/views/users/index.html.erb</p>

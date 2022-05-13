@@ -1,6 +1,18 @@
 <% if logged_in? %>
     <h1>home</h1>
     <h4> hello, <%=current_user.name%></h4>
+
+    <%= form_with model:@new_tweet do |f| %>
+    <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new tweet.." %>
+    </div>
+    <%= f.submit "Post" %>
+    <% end %>
+
+    <% @tweets.each.do |tweet| %>
+        <%= render 'layouts/tweet', tweet: tweet %>
+    <% end %>
+
 <%else%>
     <h4> please login </h4>
 <%end%>
